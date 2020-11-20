@@ -1,0 +1,19 @@
+---
+title: 'Week3 Project of Coursera Course: Developing Data Products'
+author: "RYH@HK"
+date: "20Nov2020"
+always_allow_html: yes
+---
+
+## Introduction
+
+This project creates a webpage with Plotly.
+
+## An interactive scatterplot of the "mtcars" dataset
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+
+plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter", 
+        color = ~factor(cyl), size = ~hp)
+```
