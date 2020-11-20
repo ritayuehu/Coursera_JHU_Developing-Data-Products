@@ -1,0 +1,27 @@
+---
+title: 'Week2 Project of Coursera Course: Developing Data Products'
+author: "RYH@HK"
+date: "20Nov2020"
+always_allow_html: yes
+---
+
+## Introduction
+
+This project creates a webpage with Leaflet
+
+## Some random places on the map
+
+```{r, echo=FALSE,message=FALSE, warning=FALSE}
+library(leaflet)
+
+set.seed(2016-04-25)
+
+df <- data.frame(lat = runif(20, min = 39.2, max = 39.3),
+                 lng = runif(20, min = -76.6, max = -76.5))
+my_map <- df %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers()
+
+my_map
+```
